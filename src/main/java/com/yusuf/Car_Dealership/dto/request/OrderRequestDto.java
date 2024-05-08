@@ -14,14 +14,16 @@ import lombok.NoArgsConstructor;
 public class OrderRequestDto {
     private String carCode;
     private ECarType carType;
-    private String buyersName;
-    private String buyersSurname;
-    private String buyersIdNumber;
+    //Customer Info
+    private String customerName;
+    private String customerSurname;
+    private String customerIdNumber;
     @Email
-    private String buyersEmail;
-    private String buyersPhoneNumber;
+    private String customerEmail;
+    private String customerPhoneNumber;
+    //Payment Info
     private Double transactedAmount;
-
+    //Address Info
     private String street;
     private String city;
     private String apartmentNo;

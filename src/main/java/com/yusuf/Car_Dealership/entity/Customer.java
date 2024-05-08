@@ -3,14 +3,12 @@ package com.yusuf.Car_Dealership.entity;
 import com.yusuf.Car_Dealership.entity.superclasses.BaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
@@ -20,13 +18,13 @@ public class Customer extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String buyersName;
-    private String buyersSurname;
-    private Long countryId;
-    private String buyersIdNumber;
+    private String customerName;
+    private String customerSurname;
+    private String customerIdNumber;
+
     @Email
-    private String buyersEmail;
-    private String buyersPhoneNumber;
+    private String customerEmail;
+    private String customerPhoneNumber;
     @Builder.Default
     private Boolean isCustomerVerified = false;
 }

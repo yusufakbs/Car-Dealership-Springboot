@@ -1,10 +1,7 @@
 package com.yusuf.Car_Dealership.entity.superclasses;
 
 
-import com.yusuf.Car_Dealership.entity.enums.EBodyType;
-import com.yusuf.Car_Dealership.entity.enums.EBrand;
-import com.yusuf.Car_Dealership.entity.enums.EColor;
-import com.yusuf.Car_Dealership.entity.enums.EDrivetrainType;
+import com.yusuf.Car_Dealership.entity.enums.*;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -41,5 +38,5 @@ public class Car extends BaseEntity {
     private Double topSpeed;
     private String carCode;
     @Builder.Default
-    private Boolean isSold = false;
+    private EStatus isSold = EStatus.ON_SHOWROOM;
 }

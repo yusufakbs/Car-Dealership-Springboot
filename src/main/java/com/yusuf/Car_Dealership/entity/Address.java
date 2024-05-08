@@ -2,13 +2,11 @@ package com.yusuf.Car_Dealership.entity;
 
 import com.yusuf.Car_Dealership.entity.superclasses.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
@@ -28,8 +26,10 @@ public class Address extends BaseEntity {
     @Column(nullable = false)
     private String postalCode;
     @Column(nullable = false)
-    private String country;
+    private Long countryId;
 
     @Builder.Default
     private Boolean isAddressVerified = false;
+    //Mail gönderilecek, address onaylanacak.
+    // Onaylama yerine değişiklik yapılması durumunda değiştirilen address onaylı address olacak mapper lazım.
 }
