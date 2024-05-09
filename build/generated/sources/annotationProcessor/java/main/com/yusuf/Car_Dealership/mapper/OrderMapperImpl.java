@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-05-08T23:16:58+0300",
+    date = "2024-05-10T00:23:15+0300",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.7.jar, environment: Java 21.0.2 (Eclipse Adoptium)"
 )
 @Component
@@ -23,7 +23,6 @@ public class OrderMapperImpl implements OrderMapper {
 
         order.carCode( dto.getCarCode() );
         order.carType( dto.getCarType() );
-        order.transactedAmount( dto.getTransactedAmount() );
 
         return order.build();
     }

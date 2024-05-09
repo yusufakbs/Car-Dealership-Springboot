@@ -1,0 +1,32 @@
+package com.yusuf.Car_Dealership.mapper;
+
+import com.yusuf.Car_Dealership.dto.request.OrderRequestDto;
+import com.yusuf.Car_Dealership.entity.CreditCardInfo;
+import javax.annotation.processing.Generated;
+import org.springframework.stereotype.Component;
+
+@Generated(
+    value = "org.mapstruct.ap.MappingProcessor",
+    date = "2024-05-10T00:20:05+0300",
+    comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.7.jar, environment: Java 21.0.2 (Eclipse Adoptium)"
+)
+@Component
+public class CreditCardInfoMapperImpl implements CreditCardInfoMapper {
+
+    @Override
+    public CreditCardInfo fromOrderRequestToCreditCardInfo(OrderRequestDto dto) {
+        if ( dto == null ) {
+            return null;
+        }
+
+        CreditCardInfo.CreditCardInfoBuilder<?, ?> creditCardInfo = CreditCardInfo.builder();
+
+        creditCardInfo.ownersName( dto.getOwnersName() );
+        creditCardInfo.ownersSurname( dto.getOwnersSurname() );
+        creditCardInfo.creditCardNo( dto.getCreditCardNo() );
+        creditCardInfo.creditCardExpirationDate( dto.getCreditCardExpirationDate() );
+        creditCardInfo.cvc( dto.getCvc() );
+
+        return creditCardInfo.build();
+    }
+}

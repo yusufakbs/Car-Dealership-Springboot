@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-05-08T23:16:58+0300",
+    date = "2024-05-10T00:23:14+0300",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.7.jar, environment: Java 21.0.2 (Eclipse Adoptium)"
 )
 @Component
@@ -25,6 +25,7 @@ public class AddressMapperImpl implements AddressMapper {
         address.city( dto.getCity() );
         address.apartmentNo( dto.getApartmentNo() );
         address.postalCode( dto.getPostalCode() );
+        address.countryId( dto.getCountryId() );
 
         return address.build();
     }

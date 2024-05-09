@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-05-08T23:48:32+0300",
+    date = "2024-05-10T00:23:15+0300",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.7.jar, environment: Java 21.0.2 (Eclipse Adoptium)"
 )
 @Component
@@ -23,9 +23,9 @@ public class CustomerMapperImpl implements CustomerMapper {
 
         customer.customerName( dto.getCustomerName() );
         customer.customerSurname( dto.getCustomerSurname() );
-        customer.customerIdNumber( dto.getCustomerIdNumber() );
-        customer.customerEmail( dto.getCustomerEmail() );
-        customer.customerPhoneNumber( dto.getCustomerPhoneNumber() );
+        customer.customerCitizenshipId( dto.getCustomerCitizenshipId() );
+        customer.customersEmail( dto.getCustomersEmail() );
+        customer.customersPhoneNumber( dto.getCustomersPhoneNumber() );
 
         return customer.build();
     }

@@ -16,6 +16,8 @@ public class Address_Customer extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false)
     private Long addressId;
+    @Column(nullable = false)
     private Long customerId;
 }

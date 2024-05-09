@@ -41,5 +41,5 @@ public class Car extends BaseEntity {
     private String carCode;
     @Builder.Default
     @Enumerated(EnumType.STRING)
-    private EStatus isSold = EStatus.ON_SHOWROOM;
+    private EStatus status = EStatus.ON_SHOWROOM;
 }

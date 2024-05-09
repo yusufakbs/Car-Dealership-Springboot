@@ -20,11 +20,11 @@ public class Customer extends BaseEntity {
     private Long id;
     private String customerName;
     private String customerSurname;
-    private String customerIdNumber;
+    private String customerCitizenshipId;
 
     @Email
-    private String customerEmail;
-    private String customerPhoneNumber;
+    private String customersEmail;
+    private String customersPhoneNumber;
     @Builder.Default
     private Boolean isCustomerVerified = false;
 }
