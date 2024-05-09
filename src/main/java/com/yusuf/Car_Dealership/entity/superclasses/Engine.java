@@ -21,6 +21,8 @@ public class Engine extends BaseEntity {
     private Long horsePower;
     @Column(name = "torque_Nm")
     private Double torque;
+    @Enumerated(EnumType.STRING)
     private EFuelType fuelType;
+    @Enumerated(EnumType.STRING)
     private EBrand brand;
 }

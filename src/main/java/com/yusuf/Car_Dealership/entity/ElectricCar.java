@@ -2,6 +2,7 @@ package com.yusuf.Car_Dealership.entity;
 
 import com.yusuf.Car_Dealership.entity.superclasses.Car;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -16,6 +17,7 @@ public class ElectricCar extends Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     private Long electricEngineId;
     @Column(name = "battery_capacity_km")
     private Double batteryCapacity;
